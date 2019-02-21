@@ -7,20 +7,20 @@
   
   <title>Chaoyn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="layout: posttitle: “centos nginx简介”date: 2017/11/01description: “nginx配置介绍，搭建网站” tag: linux什么是nginxNginx (engine x) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru">
+  <meta name="description" content="layout: posttitle: centos nginx简介date: 2017/11/01description: “nginx配置介绍，搭建网站” tag: linux什么是nginxNginx (engine x) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chaoyn&#39;s Blog">
 <meta property="og:url" content="http://blog.yuaning.vip/2019/02/21/2017-11-01-nginx/index.html">
 <meta property="og:site_name" content="Chaoyn&#39;s Blog">
-<meta property="og:description" content="layout: posttitle: “centos nginx简介”date: 2017/11/01description: “nginx配置介绍，搭建网站” tag: linux什么是nginxNginx (engine x) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru">
+<meta property="og:description" content="layout: posttitle: centos nginx简介date: 2017/11/01description: “nginx配置介绍，搭建网站” tag: linux什么是nginxNginx (engine x) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://blog.yuaning.vip/images/nginx/架构.png">
 <meta property="og:image" content="http://blog.yuaning.vip/images/nginx/模块.png">
 <meta property="og:image" content="http://blog.yuaning.vip/images/nginx/文件结构.png">
-<meta property="og:updated_time" content="2018-07-17T09:22:43.000Z">
+<meta property="og:updated_time" content="2019-02-21T05:43:54.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chaoyn&#39;s Blog">
-<meta name="twitter:description" content="layout: posttitle: “centos nginx简介”date: 2017/11/01description: “nginx配置介绍，搭建网站” tag: linux什么是nginxNginx (engine x) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru">
+<meta name="twitter:description" content="layout: posttitle: centos nginx简介date: 2017/11/01description: “nginx配置介绍，搭建网站” tag: linux什么是nginxNginx (engine x) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点">
 <meta name="twitter:image" content="http://blog.yuaning.vip/images/nginx/架构.png">
   
     <link rel="alternate" href="/atom.xml" title="Chaoyn&#39;s Blog" type="application/atom+xml">
@@ -75,7 +75,7 @@
         <section id="main"><article id="post-2017-11-01-nginx" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/02/21/2017-11-01-nginx/" class="article-date">
-  <time datetime="2019-02-21T05:40:51.880Z" itemprop="datePublished">2019-02-21</time>
+  <time datetime="2019-02-21T05:43:54.037Z" itemprop="datePublished">2019-02-21</time>
 </a>
     
   </div>
@@ -85,7 +85,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>layout: post<br>title: “centos nginx简介”<br>date: 2017/11/01<br>description: “nginx配置介绍，搭建网站”</p>
+<p>layout: post<br>title: centos nginx简介<br>date: 2017/11/01<br>description: “nginx配置介绍，搭建网站”</p>
 <h2 id="tag-linux"><a href="#tag-linux" class="headerlink" title="tag: linux"></a>tag: linux</h2><h3 id="什么是nginx"><a href="#什么是nginx" class="headerlink" title="什么是nginx"></a>什么是nginx</h3><p>Nginx (engine x) 是一个高性能的 <strong>HTTP</strong> 和 <strong>反向代理</strong> 服务器，也是一个 <strong>IMAP/POP3/SMTP</strong> 服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。</p>
 <p>其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等</p>
 <p>目前淘宝在nginx做了二次开发：tengine</p>
@@ -228,7 +228,7 @@ location ^~ /images/ {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.yuaning.vip/2019/02/21/2017-11-01-nginx/" data-id="cjse784d90000oxyn7jmeumw9" class="article-share-link">Share</a>
+      <a data-url="http://blog.yuaning.vip/2019/02/21/2017-11-01-nginx/" data-id="cjse7bja20000xqyn6o7z0deb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -237,19 +237,10 @@ location ^~ /images/ {
     
 <nav id="article-nav">
   
-    <a href="/2019/02/21/2018-07-17-nginx-optimize/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/02/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/02/21/2018-07-17-nginx-optimize/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>
@@ -286,11 +277,11 @@ location ^~ /images/ {
       <ul>
         
           <li>
-            <a href="/2019/02/21/2018-07-17-nginx-optimize/">(no title)</a>
+            <a href="/2019/02/21/2017-11-01-nginx/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2019/02/21/2017-11-01-nginx/">(no title)</a>
+            <a href="/2019/02/21/2018-07-17-nginx-optimize/">(no title)</a>
           </li>
         
           <li>
